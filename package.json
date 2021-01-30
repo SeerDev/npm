@@ -1,0 +1,24 @@
+{
+  "name": "simpledb.js",
+  "version": "0.0.1",
+  "description": "Store and get objects easily with simpledb!",
+  "main": "inc.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": "",
+  "keywords": [
+    "database",
+    "json",
+    "storage",
+    "simple"
+  ],
+  "author": "Seer#6054",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "update-notifier": "^5.0.1"
+  }
+}
