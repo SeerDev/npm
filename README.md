@@ -2,6 +2,4 @@
 
 
 ### Docs
-[Here](https://wzc-seer.gitbook.io/slize/npm-package/docs)
-"# npm" 
-"# npm" 
+[Here](https://wzc-seer.gitbook.io/slize/npm-package/docs) 

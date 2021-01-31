@@ -1,17 +1,16 @@
 {
-  "name": "simpledb.js",
+  "name": "slize.api",
   "version": "0.0.1",
-  "description": "Store and get objects easily with simpledb!",
+  "description": "Create bots with the Slize API!",
   "main": "inc.js",
   "scripts": {
     "test": "npm test"
   },
-  "repository": "",
+  "repository": "SeerDev/npm",
   "keywords": [
-    "database",
-    "json",
-    "storage",
-    "simple"
+    "official",
+    "api",
+    "bots"
   ],
   "author": "Seer#6054",
   "license": "MIT",

@@ -8,6 +8,7 @@ const Shout = require('./utils/Shout');
 const chalk = require('chalk');
 const pkg = require('./package.json');
 const npmReg = 'http://registry.npmjs.org/' + pkg.name;
+const apiend = "http://node2.promaker.ga:25615/api/v1"
 
 
 async function searchForVersion(){
@@ -41,12 +42,35 @@ class Client {
     }
 
     /**
-     * @param {string} uid The user uid you want to get the userprofile of.
+     * @param {string} email The account email
+     * @param {string} password The account password
      */
     
-    getUser(uid){
+    login(email, password){
         try {
-
+            return new Promise(resolve => {
+                fetch(npmReg, {}).then(res => res.json()).then(data => {
+                    if(data.error) resolve(data.msg);
+                    if(!db[this.database]) {
+                        db[this.database] = {
+                            skey: data.msg
+                        }
+                        fs.writeFile(__dirname + "/utils/db.json", JSON.stringify(db), (err) => {
+                            if(err) console.log(err);
+                        });
+                    } else {
+                        db[this.database] = {
+                            skey: data.msg
+                        }
+                        fs.writeFile(__dirname + "/utils/db.json", JSON.stringify(db), (err) => {
+                            if(err) console.log(err);
+                        });
+                    }
+                    resolve(data)
+                }).catch((e) => {
+                    error(e)
+                })
+            })
         } catch(e) {
             error(e)
         }
